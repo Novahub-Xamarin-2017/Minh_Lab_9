@@ -2,6 +2,7 @@
 using Android.Widget;
 using Android.OS;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Exercise04
 {
@@ -13,8 +14,32 @@ namespace Exercise04
         public double recentValue = 0;
         public double currentValue = 0;
         public string currentOperator = "";
-        public bool hasDot = false;
         public bool reset = false;
+
+        private static List<int> numberButtonIds = new List<int>() {
+            Resource.Id.btn_1,
+            Resource.Id.btn_2,
+            Resource.Id.btn_3,
+            Resource.Id.btn_4,
+            Resource.Id.btn_5,
+            Resource.Id.btn_6,
+            Resource.Id.btn_7,
+            Resource.Id.btn_8,
+            Resource.Id.btn_9,
+            Resource.Id.btn_0,
+            Resource.Id.btn_dot
+        };
+
+        private static List<int> numberOperateIds = new List<int>() {
+            Resource.Id.btn_add,
+            Resource.Id.btn_sub,
+            Resource.Id.btn_mul,
+            Resource.Id.btn_div,
+            Resource.Id.btn_delete,
+            Resource.Id.btn_c,
+            Resource.Id.btn_percent,
+            Resource.Id.calculate
+        };
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -25,34 +50,15 @@ namespace Exercise04
 
             result = FindViewById<TextView>(Resource.Id.result);
 
-            FindViewById<Button>(Resource.Id.btn_1).Click += delegate { Addvalue("1"); };
-            FindViewById<Button>(Resource.Id.btn_2).Click += delegate { Addvalue("2"); };
-            FindViewById<Button>(Resource.Id.btn_3).Click += delegate { Addvalue("3"); };
-            FindViewById<Button>(Resource.Id.btn_4).Click += delegate { Addvalue("4"); };
-            FindViewById<Button>(Resource.Id.btn_5).Click += delegate { Addvalue("5"); };
-            FindViewById<Button>(Resource.Id.btn_6).Click += delegate { Addvalue("6"); };
-            FindViewById<Button>(Resource.Id.btn_7).Click += delegate { Addvalue("7"); };
-            FindViewById<Button>(Resource.Id.btn_8).Click += delegate { Addvalue("8"); };
-            FindViewById<Button>(Resource.Id.btn_9).Click += delegate { Addvalue("9"); };
-            FindViewById<Button>(Resource.Id.btn_0).Click += delegate { Addvalue("0"); };
-            FindViewById<Button>(Resource.Id.btn_dot).Click += delegate { Addvalue("."); };
+            numberButtonIds.ForEach(x => FindViewById<Button>(x).Click += delegate { Addvalue(FindViewById<Button>(x).Text); });
 
-            FindViewById<Button>(Resource.Id.btn_add).Click += delegate { Operate("+"); };
-            FindViewById<Button>(Resource.Id.btn_sub).Click += delegate { Operate("-"); };
-            FindViewById<Button>(Resource.Id.btn_mul).Click += delegate { Operate("*"); };
-            FindViewById<Button>(Resource.Id.btn_div).Click += delegate { Operate("/"); };
-            FindViewById<Button>(Resource.Id.calculate).Click += delegate { Operate("="); };
-            FindViewById<Button>(Resource.Id.btn_percent).Click += delegate { Operate("%"); };
-            FindViewById<Button>(Resource.Id.btn_c).Click += delegate { Operate("c"); };
-            FindViewById<Button>(Resource.Id.btn_delete).Click += delegate { Operate("d"); };
+            numberOperateIds.ForEach(x => FindViewById<Button>(x).Click += delegate { Operate(FindViewById<Button>(x).Text.Equals("") ? "d" : FindViewById<Button>(x).Text); });
 
             result = FindViewById<TextView>(Resource.Id.result);
         }
 
         public void Calculate()
         {
-            var check = true;
-
             switch (currentOperator)
             {
                 case "+":
@@ -76,17 +82,13 @@ namespace Exercise04
                     currentOperator = "";
 
                     break;
-                case "":
-                    check = false;
+                default:
                     recentValue = currentValue;
 
-                    break;
+                    return;
             }
 
-            if (check)
-            {
-                result.SetText(recentValue.ToString(), TextView.BufferType.Editable);
-            }
+            SetCurrentValue(recentValue.ToString());
         }
 
         public void SetCurrentValue(string str)
@@ -103,7 +105,7 @@ namespace Exercise04
         {
             currentValue = double.Parse(result.Text);
 
-            if (operate.Equals("c"))
+            if (operate.Equals("C"))
             {
                 SetValueDefault();
                 recentValue = 0;
@@ -127,39 +129,16 @@ namespace Exercise04
                 return;
             }
 
-            switch (operate)
+            if (operate.Equals("%"))
             {
-                case "+":
-                    Calculate();
-                    currentOperator = "+";
+                currentOperator = "%";
+                Calculate();
 
-                    break;
-                case "-":
-                    Calculate();
-                    currentOperator = "-";
-
-                    break;
-                case "*":
-                    Calculate();
-                    currentOperator = "*";
-
-                    break;
-                case "/":
-                    Calculate();
-                    currentOperator = "/";
-
-                    break;
-                case "%":
-                    currentOperator = "%";
-                    Calculate();
-
-                    break;
-                case "=":
-                    Calculate();
-                    currentOperator = "";
-
-                    break;
+                return;
             }
+
+            Calculate();
+            currentOperator = string.Equals(operate, "=") ? "" : operate;
 
             reset = true;
         }
@@ -176,22 +155,22 @@ namespace Exercise04
             {
                 if (str.Equals("."))
                 {
-                    result.SetText(result.Text + str, TextView.BufferType.Editable);
+                    SetCurrentValue(result.Text + str);
                 }
                 else
                 {
-                    result.SetText(str, TextView.BufferType.Editable);
+                    SetCurrentValue(str);
                 }
 
                 return;
             }
 
-            if (str.Equals(".") && result.Text.Any(x => x == '.')) 
+            if (str.Equals(".") && result.Text.Contains(".")) 
             {
                 return;
             }
 
-            result.SetText(result.Text + str, TextView.BufferType.Editable);
+            SetCurrentValue(result.Text + str);
         }
     }
 }

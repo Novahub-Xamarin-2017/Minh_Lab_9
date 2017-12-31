@@ -34,6 +34,7 @@
         <Button
             android:drawableLeft="@drawable/backarrow"
             android:paddingLeft="@dimen/padding_large"
+            android:text=""
             android:id="@+id/btn_delete"
             android:layout_weight="1"
             android:layout_width="wrap_content"
