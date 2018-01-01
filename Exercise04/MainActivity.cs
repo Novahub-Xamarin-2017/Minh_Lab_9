@@ -48,11 +48,20 @@ namespace Exercise04
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            result = FindViewById<TextView>(Resource.Id.result);
+            numberButtonIds.ForEach(x =>
+            {
+                var button = FindViewById<Button>(x);
 
-            numberButtonIds.ForEach(x => FindViewById<Button>(x).Click += delegate { Addvalue(FindViewById<Button>(x).Text); });
+                button.Click += delegate { Addvalue(button.Text); };
+            });
 
-            numberOperateIds.ForEach(x => FindViewById<Button>(x).Click += delegate { Operate(FindViewById<Button>(x).Text.Equals("") ? "d" : FindViewById<Button>(x).Text); });
+            numberOperateIds.ForEach(x =>
+            {
+                var button = FindViewById<Button>(x);
+                var operate = button.Text.Equals("") ? "d" : button.Text;
+
+                button.Click += delegate { Operate(operate); };
+            });
 
             result = FindViewById<TextView>(Resource.Id.result);
         }
