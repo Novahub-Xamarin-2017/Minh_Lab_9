@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Exercise06+07</string>
+  <string name="forgot_pw">Forgot Password?</string>
+  <string name="login">LOGIN</string>
+  <string name="login_lower">Login</string>
+  <string name="register">REGISTER</string>
+  <string name="register_lower">Register</string>
+  <string name="no_acc">No Account?</string>
+  <string name="name">Name</string>
+  <string name="password">Password</string>
+  <string name="phone">Mobile Number</string>
+  <string name="code">Refere Code</string>
+  <string name="had_acc">Already Account?</string>
+</resources>
