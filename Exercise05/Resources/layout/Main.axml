@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="@color/light_skyblue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@android:style/Theme.Material.Light.DarkActionBar"
+        android:id="@+id/toolbar">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:drawableLeft="@drawable/backarrow"
+            android:background="@null" />
+        <TextView
+            android:text="@string/app"
+            android:textSize="@dimen/text_size_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5" />
+    </Toolbar>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:layout_weight="1"
+        android:id="@+id/linearLayout1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout1">
+            <TextView
+                android:text="@string/person_info"
+                android:textSize="@dimen/text_size_large"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout2">
+            <EditText
+                android:hint="@string/first_name"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout3">
+            <TextView
+                android:text="@string/connors"
+                android:textSize="@dimen/text_size_small"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout4">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout5">
+                <EditText
+                    android:hint="@string/date"
+                    android:textSize="@dimen/text_size_medium"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:layout_width="0dp"
+                    android:id="@+id/editText1" />
+                <EditText
+                    android:hint="@string/social"
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:layout_width="0dp"
+                    android:id="@+id/editText2" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout6">
+            <TextView
+                android:text="@string/residence_address"
+                android:textSize="@dimen/text_size_large"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout7">
+            <EditText
+                android:hint="@string/address"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/editText3" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout8">
+            <EditText
+                android:hint="@string/city"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:id="@+id/editText4" />
+            <Spinner
+                android:id="@+id/state"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/linearLayout9">
+            <EditText
+                android:hint="@string/zipcode"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:id="@+id/editText5" />
+            <Spinner
+                android:id="@+id/country"
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

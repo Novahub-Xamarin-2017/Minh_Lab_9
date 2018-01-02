@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="?android:attr/colorPrimary"
+        android:minWidth="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar1">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back"
+            android:drawableLeft="@drawable/leftarrow"
+            android:background="@null" />
+        <TextView
+            android:text="@string/register_lower"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" />
+    </Toolbar>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout2">
+            <ImageView
+                android:src="@drawable/user"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/imageView1" />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="@string/name"
+                android:layout_weight="4"
+                android:id="@+id/editText1" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3">
+            <ImageView
+                android:src="@drawable/phonecall"
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="@string/phone"
+                android:layout_weight="4"
+                android:id="@+id/editText2" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout5">
+            <ImageView
+                android:src="@drawable/brackets"
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="@string/code"
+                android:layout_weight="4"
+                android:id="@+id/editText3" />
+        </LinearLayout>
+        <Button
+            android:text="@string/register"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:background="@color/pink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout4">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2px"
+                android:background="#000"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/view1" />
+            <TextView
+                android:text="@string/had_acc"
+                android:textSize="@dimen/text_size_small"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/textView1" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2px"
+                android:background="#000"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/view2" />
+        </LinearLayout>
+        <Button
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:text="@string/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/change_login" />
+    </LinearLayout>
+</LinearLayout>
