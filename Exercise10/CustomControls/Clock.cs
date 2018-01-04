@@ -44,19 +44,15 @@ namespace Exercise10.CustomControls
 
         public override void Draw(Canvas canvas)
         {
-            //UpdateClock();
+            UpdateClock();
 
             var xCenter = canvas.Width / 2;
             var yCenter = canvas.Height / 2;
             var radius = Math.Min(xCenter, yCenter) - margin;
 
-            //DrawNeedle(xCenter, yCenter, (int)(radius * 0.6), currentHour, Hour, Color.Black, (int)(needleThin * 1), canvas);
-            //DrawNeedle(xCenter, yCenter, (int)(radius * 0.7), currentMinute, Minute, Color.Black, (int)(needleThin * 0.8), canvas);
-            //DrawNeedle(xCenter, yCenter, (int)(radius * 0.8), currentSecond, Minute, Color.Black, (int)(needleThin * 0.4), canvas);
-
-            DrawNeedle(xCenter, yCenter, (int)(radius * 0.6), 4, Hour, Color.Black, (int)(needleThin * 1), canvas);
-            DrawNeedle(xCenter, yCenter, (int)(radius * 0.7), 15, Minute, Color.Black, (int)(needleThin * 0.8), canvas);
-            DrawNeedle(xCenter, yCenter, (int)(radius * 0.8), 28, Minute, Color.Black, (int)(needleThin * 0.4), canvas);
+            DrawNeedle(xCenter, yCenter, (int)(radius * 0.6), currentHour, Hour, Color.Black, (int)(needleThin * 1), canvas);
+            DrawNeedle(xCenter, yCenter, (int)(radius * 0.7), currentMinute, Minute, Color.Black, (int)(needleThin * 0.8), canvas);
+            DrawNeedle(xCenter, yCenter, (int)(radius * 0.8), currentSecond, Minute, Color.Black, (int)(needleThin * 0.4), canvas);
 
             DrawHourNumbers(xCenter, yCenter, (int)(radius * 0.75), Color.Black, textSize, canvas);
 
