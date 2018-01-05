@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="@string/txt_app"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginSmall"
+        android:layout_marginBottom="@dimen/marginLarge"
+        android:gravity="center"
+        android:id="@+id/textView1" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/number_a"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/marginSmall"
+        android:hint="@string/txt_a" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/number_b"
+        android:layout_marginBottom="@dimen/marginSmall"
+        android:hint="@string/txt_b" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/number_c"
+        android:layout_marginBottom="@dimen/marginSmall"
+        android:hint="@string/txt_c" />
+    <Button
+        android:text="@string/btn_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginLarge"
+        android:layout_marginBottom="@dimen/marginLarge"
+        android:id="@+id/calculate" />
+    <TextView
+        android:text="@string/txt_result"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/result" />
+</LinearLayout>

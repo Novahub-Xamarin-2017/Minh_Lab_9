@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="text_size_large">34sp</dimen>
+  <dimen name="text_size_medium">24sp</dimen>
+  <dimen name="text_size_small">18sp</dimen>
+
+  <dimen name="margin_small">12dp</dimen>
+  <dimen name="margin_medium">24dp</dimen>
+  <dimen name="margin_large">80dp</dimen>
+
+  <dimen name="padding_large">50dp</dimen>
+</resources>

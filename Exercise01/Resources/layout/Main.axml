@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:background="@color/ghost_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar1">
+        <Button
+            android:text="@string/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:background="@null"
+            android:textColor="@color/red"
+            android:drawableLeft="@drawable/back_icon"
+            android:drawableTint="@color/red" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:layout_gravity="center"
+            android:text="@string/sign_up"
+            android:textColor="@android:color/black" />
+        <Button
+            android:text="@string/sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:textColor="@color/red" />
+    </Toolbar>
+    <Button
+        android:text="@string/connect_facebook"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:background="@color/gainsboro"
+        android:textColor="@color/cornflower_blue"
+        android:textSize="@dimen/text_size_medium"
+        android:drawableLeft="@drawable/facebook_logo"
+        android:paddingLeft="@dimen/padding_small"
+        android:drawableTint="@color/cornflower_blue" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_weight="1"
+        android:weightSum="5"
+        android:background="@android:color/background_light">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/linearLayout3"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:layout_marginLeft="@dimen/margin_medium">
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="@string/first_name"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray" />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="@string/last_name"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray" />
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="@string/email"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:layout_marginLeft="@dimen/margin_medium" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="@string/username"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:layout_marginLeft="@dimen/margin_medium" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="@string/password"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:layout_marginLeft="@dimen/margin_medium" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="@string/confirm_password"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:layout_marginLeft="@dimen/margin_medium" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:background="@color/gainsboro">
+        <TextView
+            android:text="@string/agree"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView3"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_small"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_small"
+            android:paddingRight="@dimen/textview_padding" />
+        <Button
+            android:text="@string/terms_of_service"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button3"
+            android:background="@null"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/red" />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/switch1"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/margin_large" />
+    </LinearLayout>
+</LinearLayout>

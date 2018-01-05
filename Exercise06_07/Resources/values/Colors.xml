@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <color name="pink">#ff5353</color>
+  <color name="back">#000000</color>
+  <color name="white">#ffffff</color>
+  <color name="color_toolbar">#4cb050</color>
+</resources>

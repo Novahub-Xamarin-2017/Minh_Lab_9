@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Exercise05</string>
+
+  <string name="app">Application</string>
+  <string name="person_info">Personal info</string>
+  <string name="first_name">Personal info</string>
+  <string name="connors">Connors</string>
+
+  <string name="date">Date</string>
+  <string name="social">Social Security</string>
+  <string name="residence_address">Residence address</string>
+
+  <string name="address">Address</string>
+  <string name="city">City</string>
+  <string name="zipcode">Zipcode</string>
+
+  <string-array name="states">
+    <item>CA</item>
+    <item>CB</item>
+  </string-array>
+  <string-array name="countries">
+    <item>United States</item>
+    <item>Viet Nam</item>
+  </string-array>
+</resources>
