@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="margin_medium">20dp</dimen>
+
+  <dimen name="text_size_medium">24sp</dimen>
+
+  <dimen name="radius_thumb">40dp</dimen>
+</resources>
